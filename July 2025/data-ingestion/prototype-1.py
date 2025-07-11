@@ -1,5 +1,4 @@
 import yfinance as yf
-import random
 
 def fibonacci(n):
     if n < 0:
