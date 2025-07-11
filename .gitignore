@@ -1,3 +1,8 @@
+# virtual-env dirs
 venv/
+
+# jupyter checkpoints
 .ipynb_checkpoints/
-**/code snippets.md
+
+# working code snippets
+code-snippets.md
