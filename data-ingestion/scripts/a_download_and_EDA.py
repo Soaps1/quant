@@ -2,12 +2,15 @@ import sys
 import os
 import pandas as pd
 
-root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # ← back to quant/
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))  # ← back to quant/
 sys.path.insert(0, root_path)
 
 from src.utils import get_stock_data
 from src.utils import calculate_daily_returns
 from src.utils import sma, ema, momentum, volatility, rolling_range, rsi
+from src.features import print_hello_world
+from z_helper_functions import greeting
+
 
 def get_stock_signals(ticker):
     # Get raw stock data
@@ -30,9 +33,11 @@ def get_stock_signals(ticker):
     return raw_data, signals
 
 def main():
+    greeting()
+    print_hello_world()  # Call the function to print "Hello, world!"
     data, signals = get_stock_signals('AAPL')  # Example ticker
     print(data.head())  # Display the first few rows of the loaded data
-    print(signals.head())  # Display the first few rows of signals
+    print(signals.tail())  # Display the first few rows of signals
 
 if __name__ == "__main__":
     main()
