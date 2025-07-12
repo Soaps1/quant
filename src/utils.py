@@ -6,7 +6,7 @@ def load_data(file_path):
     return data
 
 def get_stock_data(ticker):
-    stock_data = yf.download(ticker, period="20y", interval="1d", auto_adjust=True)
+    stock_data = yf.download(ticker, period="10y", interval="1d", auto_adjust=True)
     return stock_data
 
 def calculate_daily_returns(stock_data):
